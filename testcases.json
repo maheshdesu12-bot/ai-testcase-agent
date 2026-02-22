@@ -1,0 +1,206 @@
+{
+  "positive_test_cases": [
+    {
+      "id": "TC001",
+      "title": "Successful login with valid user id and password",
+      "steps": [
+        "Navigate to login page",
+        "Enter valid user id",
+        "Enter valid password",
+        "Click on login button"
+      ],
+      "expected_result": "User is redirected to the dashboard",
+      "priority": "P0",
+      "automation_candidate": true
+    },
+    {
+      "id": "TC002",
+      "title": "Login with remember me option checked",
+      "steps": [
+        "Navigate to login page",
+        "Enter valid user id",
+        "Enter valid password",
+        "Check remember me option",
+        "Click on login button"
+      ],
+      "expected_result": "User is redirected to the dashboard and remembered on next visit",
+      "priority": "P1",
+      "automation_candidate": true
+    },
+    {
+      "id": "TC003",
+      "title": "Successful login after password reset",
+      "steps": [
+        "Navigate to login page",
+        "Enter valid user id",
+        "Enter new valid password after reset",
+        "Click on login button"
+      ],
+      "expected_result": "User is redirected to the dashboard",
+      "priority": "P0",
+      "automation_candidate": true
+    },
+    {
+      "id": "TC004",
+      "title": "Successful login with user id containing special characters",
+      "steps": [
+        "Navigate to login page",
+        "Enter valid user id with special characters",
+        "Enter valid password",
+        "Click on login button"
+      ],
+      "expected_result": "User is redirected to the dashboard",
+      "priority": "P1",
+      "automation_candidate": true
+    },
+    {
+      "id": "TC005",
+      "title": "Successful login with user id and password in different cases",
+      "steps": [
+        "Navigate to login page",
+        "Enter valid user id in different case",
+        "Enter valid password in different case",
+        "Click on login button"
+      ],
+      "expected_result": "User is redirected to the dashboard",
+      "priority": "P1",
+      "automation_candidate": true
+    }
+  ],
+  "negative_test_cases": [
+    {
+      "id": "TC101",
+      "title": "Login with invalid user id",
+      "steps": [
+        "Navigate to login page",
+        "Enter invalid user id",
+        "Enter valid password",
+        "Click on login button"
+      ],
+      "expected_result": "Error message displayed: 'Invalid user id or password'",
+      "priority": "P0",
+      "automation_candidate": true
+    },
+    {
+      "id": "TC102",
+      "title": "Login with invalid password",
+      "steps": [
+        "Navigate to login page",
+        "Enter valid user id",
+        "Enter invalid password",
+        "Click on login button"
+      ],
+      "expected_result": "Error message displayed: 'Invalid user id or password'",
+      "priority": "P0",
+      "automation_candidate": true
+    },
+    {
+      "id": "TC103",
+      "title": "Login with empty user id",
+      "steps": [
+        "Navigate to login page",
+        "Leave user id field empty",
+        "Enter valid password",
+        "Click on login button"
+      ],
+      "expected_result": "Error message displayed: 'User id cannot be empty'",
+      "priority": "P1",
+      "automation_candidate": true
+    },
+    {
+      "id": "TC104",
+      "title": "Login with empty password",
+      "steps": [
+        "Navigate to login page",
+        "Enter valid user id",
+        "Leave password field empty",
+        "Click on login button"
+      ],
+      "expected_result": "Error message displayed: 'Password cannot be empty'",
+      "priority": "P1",
+      "automation_candidate": true
+    },
+    {
+      "id": "TC105",
+      "title": "Login attempt after account lockout",
+      "steps": [
+        "Navigate to login page",
+        "Enter valid user id",
+        "Enter invalid password 5 times",
+        "Click on login button"
+      ],
+      "expected_result": "Error message displayed: 'Account locked due to multiple failed attempts'",
+      "priority": "P0",
+      "automation_candidate": true
+    }
+  ],
+  "edge_cases": [
+    {
+      "id": "TC201",
+      "title": "Login with user id containing spaces",
+      "steps": [
+        "Navigate to login page",
+        "Enter user id with leading and trailing spaces",
+        "Enter valid password",
+        "Click on login button"
+      ],
+      "expected_result": "Error message displayed: 'Invalid user id or password'",
+      "priority": "P2",
+      "automation_candidate": false
+    },
+    {
+      "id": "TC202",
+      "title": "Login with SQL injection in user id",
+      "steps": [
+        "Navigate to login page",
+        "Enter user id with SQL injection",
+        "Enter valid password",
+        "Click on login button"
+      ],
+      "expected_result": "Error message displayed: 'Invalid user id or password'",
+      "priority": "P2",
+      "automation_candidate": false
+    },
+    {
+      "id": "TC203",
+      "title": "Login with very long user id",
+      "steps": [
+        "Navigate to login page",
+        "Enter user id exceeding character limit",
+        "Enter valid password",
+        "Click on login button"
+      ],
+      "expected_result": "Error message displayed: 'User id is too long'",
+      "priority": "P2",
+      "automation_candidate": false
+    },
+    {
+      "id": "TC204",
+      "title": "Login with very long password",
+      "steps": [
+        "Navigate to login page",
+        "Enter valid user id",
+        "Enter password exceeding character limit",
+        "Click on login button"
+      ],
+      "expected_result": "Error message displayed: 'Password is too long'",
+      "priority": "P2",
+      "automation_candidate": false
+    },
+    {
+      "id": "TC205",
+      "title": "Login with special characters in password",
+      "steps": [
+        "Navigate to login page",
+        "Enter valid user id",
+        "Enter password with special characters",
+        "Click on login button"
+      ],
+      "expected_result": "User is redirected to the dashboard",
+      "priority": "P2",
+      "automation_candidate": false
+    }
+  ],
+  "feature": "Login with user id and password",
+  "generated_at": "2026-02-22T16:08:14.056529Z"
+}

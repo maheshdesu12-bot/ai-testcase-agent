@@ -1,0 +1,10 @@
+{
+  "base_url": "http://127.0.0.1:8000",
+  "login_path": "/login",
+  "selectors": {
+    "email": "[data-test='login-email']",
+    "password": "[data-test='login-password']",
+    "submit": "[data-test='login-submit']",
+    "error": "[data-test='login-error']"
+  }
+}

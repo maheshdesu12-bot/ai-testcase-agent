@@ -1,0 +1,6 @@
+{
+  "chunks": [
+    "\"positive_test_cases\": [     {       \"id\": \"TC001\" ,       \"title\": \"Successful login with valid email and password\" ,       \"steps\": [         \"Navigate to login page\" ,         \"Enter valid email\" ,         \"Enter valid password\" ,         \"Click on login button\"       ],       \"expected_result\": \"User is logged in and redirected to the dashboard\" ,       \"priority\": \"P0\" ,       \"automation_candidate\": true     },     {       \"id\": \"TC002\" ,       \"title\": \"Login with Remember Me option checked\" ,       \"steps\": [         \"Navigate to login page\" ,         \"Enter valid email\" ,         \"Enter valid password\" ,         \"Check Remember Me option\" ,         \"Click on login button\"       ],       \"expected_result\": \"User is logged in and session is remembered for next visit\" ,       \"priority\": \"P1\" , \n      \"automation_candidate\": true     },",
+    "ession is remembered for next visit\" ,       \"priority\": \"P1\" , \n      \"automation_candidate\": true     },"
+  ]
+}
