@@ -1,78 +1,83 @@
-# AI Testcase Agent using LLM, RAG, and Agentic AI
+# AI Testcase Agent (LLM + RAG + Agent + Playwright)
 
-## Overview
+AI-powered system that generates, validates, and executes software test cases using Large Language Models and Retrieval-Augmented Generation.
 
-This project implements an autonomous AI agent that generates software test cases and automation scripts using Large Language Models, Retrieval-Augmented Generation (RAG), and Playwright.
-
-It demonstrates a real-world AI engineering workflow from requirements → test cases → automation → execution.
+This project demonstrates production-grade AI engineering architecture.
 
 ---
 
 ## Features
 
-- LLM-powered test case generation
-- Multi-agent architecture (Planner, Generator, Reviewer)
-- Retrieval-Augmented Generation using requirement PDFs
-- Automated Playwright test generation
-- Fully executable automation framework
-- FastAPI integration
-- Config-driven design
+- LLM-powered testcase generation
+- RAG-based requirement retrieval
+- Agent orchestration
+- FastAPI interface
+- Playwright automated execution
+- Vector search with FAISS
 
 ---
 
 ## Architecture
 
-Input Feature / Requirements
-        ↓
-Planner Agent
-        ↓
-RAG Pipeline (PDF Context)
-        ↓
-Generator Agent
-        ↓
-Reviewer Agent
-        ↓
-Automation Agent
-        ↓
-Playwright Execution
+See docs/architecture.md
 
 ---
 
-## Tech Stack
-
-Python  
-OpenAI API  
-FastAPI  
-Playwright  
-Pytest  
-FAISS (vector search)  
-Agentic AI  
+## Project Structure
 
 ---
 
-## Run locally
+## Installation
+git clone https://github.com/maheshdesu12-bot/ai-testcase-agent.git
 
-Start demo app:
+cd ai-testcase-agent
 
-uvicorn demo_app.app:app --reload
+python -m venv ai-env
+source ai-env/bin/activate
 
-Run agent:
-
-python run.py
-
-Run automation tests:
-
-python -m pytest -q
+pip install -r requirements.txt
 
 ---
 
-## Example Result
+## Setup Environment
 
-4/4 automation tests passed using AI-generated test cases and scripts.
+Create `.env`
+OPENAI_API_KEY=your_api_key_here
+
+---
+
+## Run API
+uvicorn src.api.api:app --reload
+
+---
+
+## Run Tests
+pytest
+
+---
+
+## Example Use Case
+
+Input:
+Login feature with email/password
+
+Output:
+Generated test cases with validation and execution
+
+---
+
+## Technologies Used
+
+- Python
+- OpenAI GPT
+- FastAPI
+- FAISS
+- Playwright
+- Pytest
 
 ---
 
 ## Author
 
-Mahesh Desu  
+Mahesh Desu
 AI Engineer Portfolio Project
