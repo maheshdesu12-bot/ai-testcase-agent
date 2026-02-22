@@ -1,47 +1,56 @@
-# AI Test Case Generator with Agentic AI and RAG
+# AI Testcase Agent using LLM, RAG, and Agentic AI
 
 ## Overview
 
-This project uses Large Language Models (LLMs), Retrieval-Augmented Generation (RAG), and Agentic AI to automatically:
+This project implements an autonomous AI agent that generates software test cases and automation scripts using Large Language Models, Retrieval-Augmented Generation (RAG), and Playwright.
 
-- Generate test cases from feature descriptions
-- Refine test cases using QA best practices
-- Generate Playwright automation code
-- Execute automation tests against a real application
+It demonstrates a real-world AI engineering workflow from requirements → test cases → automation → execution.
+
+---
+
+## Features
+
+- LLM-powered test case generation
+- Multi-agent architecture (Planner, Generator, Reviewer)
+- Retrieval-Augmented Generation using requirement PDFs
+- Automated Playwright test generation
+- Fully executable automation framework
+- FastAPI integration
+- Config-driven design
+
+---
 
 ## Architecture
 
-Feature Description
-       ↓
+Input Feature / Requirements
+        ↓
 Planner Agent
-       ↓
-RAG Pipeline (PDF context)
-       ↓
+        ↓
+RAG Pipeline (PDF Context)
+        ↓
 Generator Agent
-       ↓
+        ↓
 Reviewer Agent
-       ↓
-Automation Generator Agent
-       ↓
-Playwright Test Execution
+        ↓
+Automation Agent
+        ↓
+Playwright Execution
+
+---
 
 ## Tech Stack
 
-- Python
-- OpenAI API
-- FastAPI
-- Playwright
-- pytest
-- RAG
-- Agentic AI
+Python  
+OpenAI API  
+FastAPI  
+Playwright  
+Pytest  
+FAISS (vector search)  
+Agentic AI  
 
-## Example Result
+---
 
-- Generated test cases automatically
-- Generated automation code automatically
-- Executed tests successfully (4 passed)
-
-## How to Run
+## Run locally
 
 Start demo app:
 
@@ -49,8 +58,21 @@ uvicorn demo_app.app:app --reload
 
 Run agent:
 
-python agent.py
+python run.py
 
-Run tests:
+Run automation tests:
 
 python -m pytest -q
+
+---
+
+## Example Result
+
+4/4 automation tests passed using AI-generated test cases and scripts.
+
+---
+
+## Author
+
+Mahesh Desu  
+AI Engineer Portfolio Project
