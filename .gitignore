@@ -1,4 +1,18 @@
+# Secrets
 .env
-outputs/
+
+# Python
 __pycache__/
 *.pyc
+*.pyo
+
+# Outputs
+outputs/
+*.json
+
+# OS
+.DS_Store
+
+# IDE
+.vscode/
+.idea/
